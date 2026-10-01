@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,42 +22,24 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Contact + Social */}
-          <div className="flex items-center gap-5 flex-wrap">
-            <a
-              href="tel:+919003144864"
-              className="flex items-center gap-1.5 hover:text-[#B8962E] transition-colors"
-              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)' }}
-            >
-              <Phone size={12} style={{ color: '#B8962E' }} />
-              +91 90031 44864
-            </a>
-            <a
-              href="mailto:ravishagroups2@gmail.com"
-              className="flex items-center gap-1.5 hover:text-[#B8962E] transition-colors"
-              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)' }}
-            >
-              <Mail size={12} style={{ color: '#B8962E' }} />
-              ravishagroups2@gmail.com
-            </a>
-            <div className="flex items-center gap-2">
-              {[
-                { icon: Facebook, label: 'Facebook' },
-                { icon: Instagram, label: 'Instagram' },
-                { icon: Linkedin, label: 'LinkedIn' },
-                { icon: Youtube, label: 'YouTube' },
-              ].map(({ icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-[#B8962E] transition-all duration-300"
-                  style={{ border: '1px solid rgba(255,255,255,0.15)' }}
-                >
-                  <Icon size={12} style={{ color: 'rgba(255,255,255,0.6)' }} />
-                </a>
-              ))}
-            </div>
+          {/* Social Icons only */}
+          <div className="flex items-center gap-2">
+            {[
+              { icon: Facebook, label: 'Facebook' },
+              { icon: Instagram, label: 'Instagram' },
+              { icon: Linkedin, label: 'LinkedIn' },
+              { icon: Youtube, label: 'YouTube' },
+            ].map(({ icon: Icon, label }) => (
+              <a
+                key={label}
+                href="#"
+                aria-label={label}
+                className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-[#B8962E] transition-all duration-300"
+                style={{ border: '1px solid rgba(255,255,255,0.15)' }}
+              >
+                <Icon size={12} style={{ color: 'rgba(255,255,255,0.6)' }} />
+              </a>
+            ))}
           </div>
 
         </div>

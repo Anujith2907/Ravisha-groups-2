@@ -24,8 +24,8 @@ const constructionStats = [
 ];
 
 const cinemaStats = [
-  { icon: Film, value: '10+', label: 'Film Productions' },
-  { icon: Star, value: '5+', label: 'Award-Winning Films' },
+  { icon: Film, value: '65+', label: 'Film Productions' },
+  { icon: Star, value: '25+', label: 'Years of Experience' },
   { icon: Users, value: '50+', label: 'Industry Collaborations' },
 ];
 

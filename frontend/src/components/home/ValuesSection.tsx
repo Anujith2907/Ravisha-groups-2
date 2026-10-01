@@ -55,7 +55,7 @@ const ValuesSection = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 lg:py-24 bg-[#F7F5F0] border-t border-[#E8E3D8]">
+    <section ref={ref} className="py-10 lg:py-12 bg-[#F7F5F0] border-t border-[#E8E3D8]">
       <div className="container-wide">
         
         {/* Section Header */}
