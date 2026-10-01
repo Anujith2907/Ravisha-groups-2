@@ -1,0 +1,977 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   RAVISHA GROUPS — LIGHT CORPORATE DESIGN SYSTEM
+   ============================================ */
+
+:root {
+  /* Brand Colors — Light Theme */
+  --color-gold: #B8962E;
+  --color-gold-dark: #9A7A20;
+  --color-gold-light: #D4B04A;
+  --color-gold-pale: #F5EDD6;
+  --color-navy: #1C1F2E;
+  --color-navy-light: #2C3150;
+  --color-white: #FFFFFF;
+  --color-off-white: #F8F7F4;
+  --color-cream: #F4F1EA;
+  --color-text: #1C1F2E;
+  --color-text-secondary: #4A4E5A;
+  --color-text-muted: #7C8099;
+  --color-border: #E2DDD4;
+  --color-border-light: #EDE9E2;
+
+  /* Typography */
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-subheading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Spacing */
+  --section-padding: clamp(4rem, 8vw, 7rem);
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: all 0.2s ease;
+
+  /* Shadows */
+  --shadow-card: 0 2px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 4px 20px rgba(184, 150, 46, 0.25);
+}
+
+/* ============================================
+   BASE RESET & TYPOGRAPHY
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+.font-heading { font-family: var(--font-heading); }
+.font-subheading { font-family: var(--font-subheading); }
+
+.text-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 7vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.text-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.section-padding {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 5rem);
+}
+
+.container-narrow {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+/* ============================================
+   SECTION BACKGROUNDS
+   ============================================ */
+
+.bg-section-white { background-color: var(--color-white); }
+.bg-section-cream { background-color: var(--color-off-white); }
+.bg-section-dark { background-color: var(--color-navy); }
+
+/* ============================================
+   COMPONENTS — BUTTONS
+   ============================================ */
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--color-gold);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.btn-gold:hover {
+  background: var(--color-gold-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-outline-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: var(--color-navy);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--color-navy);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.btn-outline-navy:hover {
+  background: var(--color-navy);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.6rem;
+  background: transparent;
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--color-gold);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.btn-outline-gold:hover {
+  background: var(--color-gold);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-white-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.btn-white-outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #FFFFFF;
+}
+
+/* btn-primary used in InquirySection / forms */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  background: var(--color-gold);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  border-radius: 3px;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background: var(--color-gold-dark);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ============================================
+   DIVIDERS & ORNAMENTS
+   ============================================ */
+
+.gold-rule {
+  width: 3rem;
+  height: 2px;
+  background: var(--color-gold);
+}
+
+.rule-maroon {
+  width: 3rem;
+  height: 2px;
+  background: var(--color-gold);
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.99);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card-light {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-light:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   FORM ELEMENTS (light theme)
+   ============================================ */
+
+.input-light {
+  width: 100%;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text);
+  padding: 0.875rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  transition: border-color 0.2s;
+  border-radius: 3px;
+  outline: none;
+}
+
+.input-light:focus { border-color: var(--color-gold); }
+.input-light::placeholder {
+  color: var(--color-text-muted);
+  font-size: 0.73rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   ADMIN PANEL STYLES (dark — kept separate)
+   ============================================ */
+
+.admin-body {
+  background-color: #0f0f10;
+  color: #e5e5e5;
+  font-family: var(--font-body);
+}
+
+.admin-card {
+  background: #1a1a1b;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.admin-input {
+  width: 100%;
+  background: #111112;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e5e5e5;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.admin-input:focus { border-color: #B8962E; }
+.admin-input::placeholder { color: #555; }
+
+.admin-textarea {
+  width: 100%;
+  background: #111112;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e5e5e5;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  border-radius: 0.25rem;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.admin-textarea:focus { border-color: #B8962E; }
+
+.admin-select {
+  width: 100%;
+  background: #111112;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e5e5e5;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.admin-select:focus { border-color: #B8962E; }
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-off-white); }
+::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 2px; }
+
+::selection {
+  background: var(--color-gold-pale);
+  color: var(--color-navy);
+}
+
+/* ============================================
+   LIGHTBOX OVERRIDES
+   ============================================ */
+
+.yarl__container { background: rgba(0, 0, 0, 0.95) !important; }
+.yarl__button { color: white !important; }
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* ============================================
+   RAVISHA GROUPS 2 — DESIGN SYSTEM
+   ============================================ */
+
+:root {
+  /* Brand Colors */
+  --color-maroon: #8B1A1A;
+  --color-maroon-dark: #6B1111;
+  --color-maroon-light: #C9A0A0;
+  --color-black: #0A0A0A;
+  --color-off-black: #111111;
+  --color-dark: #1A1A1A;
+  --color-white: #FFFFFF;
+  --color-off-white: #F5F5F0;
+  --color-light-grey: #E5E5E0;
+  --color-mid-grey: #6B7280;
+  --color-border: rgba(255, 255, 255, 0.08);
+  
+  /* Typography */
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-subheading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  
+  /* Spacing */
+  --section-padding: clamp(5rem, 10vw, 10rem);
+  
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: all 0.2s ease;
+}
+
+/* ============================================
+   BASE RESET & TYPOGRAPHY
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.text-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+
+.text-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-maroon);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.section-padding {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.container-wide {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 6rem);
+}
+
+.container-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+}
+
+/* ============================================
+   COMPONENTS
+   ============================================ */
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: var(--color-maroon);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-maroon);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-maroon-dark);
+  border-color: var(--color-maroon-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-outline-maroon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--color-maroon);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-maroon);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-outline-maroon:hover {
+  background: var(--color-maroon);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Fine lines / dividers */
+.rule-maroon {
+  width: 3rem;
+  height: 1px;
+  background: var(--color-maroon);
+}
+
+.rule-white {
+  width: 3rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.navbar.navbar-hero {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+/* ============================================
+   SECTION OVERRIDES
+   ============================================ */
+
+.bg-dark-section {
+  background-color: var(--color-off-black);
+}
+
+.bg-light-section {
+  background-color: var(--color-off-white);
+  color: var(--color-black);
+}
+
+/* Maroon highlight text */
+.text-maroon { color: var(--color-maroon); }
+.bg-maroon { background-color: var(--color-maroon); }
+.border-maroon { border-color: var(--color-maroon); }
+
+/* ============================================
+   IMAGE OVERLAY EFFECTS
+   ============================================ */
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+  transition: opacity 0.4s ease;
+}
+
+.img-overlay:hover::after {
+  opacity: 0.9;
+}
+
+.img-overlay img,
+.img-overlay .img-inner {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-overlay:hover img,
+.img-overlay:hover .img-inner {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-maroon);
+  border-radius: 2px;
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background: var(--color-maroon);
+  color: white;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fluidMorph {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    transform: translate(60px, -40px) rotate(120deg) scale(1.15);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate(-40px, 60px) rotate(240deg) scale(0.95);
+  }
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: translate(0px, 0px) rotate(360deg) scale(1);
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Nav link blink animation */
+@keyframes navBlink {
+  0%, 100% { opacity: 1; color: #1C1F2E; }
+  50% { opacity: 0.4; color: #B8962E; }
+}
+
+@keyframes navBlinkActive {
+  0%, 100% { opacity: 1; color: #B8962E; }
+  50% { opacity: 0.45; color: #9A7A20; }
+}
+
+.nav-blink {
+  animation: navBlink 2.2s ease-in-out infinite;
+}
+
+.nav-blink-active {
+  animation: navBlinkActive 2s ease-in-out infinite;
+}
+
+/* Navbar Top Animated Contact Us Button */
+@keyframes btnPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(184, 150, 46, 0.35), 0 0 2px rgba(212, 176, 74, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(184, 150, 46, 0.75), 0 0 8px rgba(212, 176, 74, 0.9);
+  }
+}
+
+@keyframes shineSweep {
+  0% {
+    left: -120%;
+  }
+  30%, 100% {
+    left: 200%;
+  }
+}
+
+.btn-animated-gold {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1C1F2E 0%, #2B3045 50%, #1C1F2E 100%);
+  color: #D4B04A;
+  border: 1.5px solid #B8962E;
+  border-radius: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 7px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: btnPulseGlow 2.5s ease-in-out infinite;
+}
+
+.btn-animated-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 176, 74, 0.45), transparent);
+  transform: skewX(-25deg);
+  animation: shineSweep 3.2s infinite;
+}
+
+.btn-animated-gold:hover {
+  background: linear-gradient(135deg, #B8962E 0%, #D4B04A 100%);
+  color: #1C1F2E;
+  border-color: #D4B04A;
+  box-shadow: 0 0 25px rgba(212, 176, 74, 0.85);
+  transform: translateY(-2px) scale(1.05);
+}
+
+
+/* ============================================
+   ADMIN PANEL STYLES
+   ============================================ */
+
+.admin-body {
+  background-color: #0f0f10;
+  color: #e5e5e5;
+  font-family: var(--font-body);
+}
+
+.admin-card {
+  background: #1a1a1b;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.admin-input {
+  width: 100%;
+  background: #111112;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e5e5e5;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.admin-input:focus {
+  border-color: var(--color-maroon);
+}
+
+.admin-input::placeholder {
+  color: #555;
+}
+
+.admin-textarea {
+  width: 100%;
+  background: #111112;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e5e5e5;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  border-radius: 0.25rem;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.admin-textarea:focus {
+  border-color: var(--color-maroon);
+}
+
+.admin-select {
+  width: 100%;
+  background: #111112;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e5e5e5;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.admin-select:focus {
+  border-color: var(--color-maroon);
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   LIGHTBOX OVERRIDES
+   ============================================ */
+
+.yarl__container {
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+
+.yarl__button {
+  color: white !important;
+}
