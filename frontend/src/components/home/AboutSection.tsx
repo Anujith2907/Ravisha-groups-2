@@ -5,7 +5,7 @@ import { contentAPI } from '../../services/api';
 import { SiteContent } from '../../types';
 
 const DEFAULT_DESCRIPTION =
-  'Ravisha Groups is a diversified enterprise with strong presence in Construction and Cinema Production. With a vision to build a better tomorrow and create impactful stories today, we blend business excellence with creativity and innovation. Our commitment is to deliver quality, inspire trust and contribute to society.';
+  'Ravisha Groups 2 is a diversified enterprise with strong presence in Construction and Cinema Production. With a vision to build a better tomorrow and create impactful stories today, we blend business excellence with creativity and innovation. Our commitment is to deliver quality, inspire trust and contribute to society.';
 
 const pillars = [
   {
@@ -39,7 +39,7 @@ const AboutSection = () => {
     contentAPI.get().then((res) => setContent(res.data)).catch(() => null);
   }, []);
 
-  const heading = content?.about?.heading || 'ABOUT RAVISHA GROUPS';
+  const heading = content?.about?.heading || 'ABOUT RAVISHA GROUPS 2';
   const description = content?.about?.description || DEFAULT_DESCRIPTION;
 
   return (

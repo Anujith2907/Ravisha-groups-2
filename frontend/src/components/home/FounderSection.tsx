@@ -134,7 +134,7 @@ const FounderSection = () => {
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
             >
               <p>
-                At Ravisha Groups, we believe in creating value that lasts for generations.
+                At Ravisha Groups 2, we believe in creating value that lasts for generations.
                 From constructing exceptional infrastructure to producing meaningful cinema,
                 our journey is driven by passion, integrity and a commitment to excellence.
               </p>

@@ -128,7 +128,7 @@ const ProjectDetail = ({
                     Client
                   </span>
                   <span className="font-medium text-[#1C1F2E]">
-                    {project.client || 'Ravisha Groups'}
+                    {project.client || 'Ravisha Groups 2'}
                   </span>
                 </div>
                 <div>
@@ -199,7 +199,7 @@ const ConstructionPage = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
-    document.title = 'Construction Division | Ravisha Groups';
+    document.title = 'Construction Division | Ravisha Groups 2';
     projectsAPI.getAll().then((res) => setProjects(res.data)).catch(() => null);
   }, []);
 

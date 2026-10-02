@@ -89,7 +89,7 @@ const HeroSection = () => {
             RAVISHA
           </motion.h1>
 
-          {/* GROUPS with gold side rules */}
+          {/* GROUPS 2 with gold side rules */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -107,7 +107,7 @@ const HeroSection = () => {
                 textShadow: '0 2px 12px rgba(0,0,0,0.5)',
               }}
             >
-              GROUPS
+              GROUPS 2
             </span>
             <div style={{ flex: 1, height: 1.5, background: '#C9A038', opacity: 0.85 }} />
           </motion.div>

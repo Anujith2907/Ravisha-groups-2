@@ -199,7 +199,7 @@ const ProductionPage = () => {
   const [selectedFilm, setSelectedFilm] = useState<Production | null>(null);
 
   useEffect(() => {
-    document.title = 'Cinema Production Division | Ravisha Groups';
+    document.title = 'Cinema Production Division | Ravisha Groups 2';
     productionsAPI.getAll().then((res) => setFilms(res.data)).catch(() => null);
   }, []);
 
@@ -403,6 +403,20 @@ const ProductionPage = () => {
                 description:
                   'Another memorable interaction with acclaimed filmmaker Suresh Chandra Menon, reflecting a shared passion for cinematic excellence and creative leadership.',
                 image: '/cinema-suresh-chandra-menon-2.jpg',
+                objectPosition: 'center 15%',
+              },
+              {
+                title: 'With Rajinikanth, Director Shankar & Atlee — Endhiran',
+                description:
+                  'A memorable journey alongside Actor Rajinikanth, Director Shankar, and Atlee during the making of Endhiran 1.',
+                image: '/cinema-endhiran-group.jpg',
+                objectPosition: 'center 20%',
+              },
+              {
+                title: 'Endhiran — Behind the Scenes with Rajinikanth, Shankar & Atlee',
+                description:
+                  'Celebrating unforgettable moments with the Endhiran cast and crew.',
+                image: '/cinema-endhiran-rajinikanth.jpg',
                 objectPosition: 'center 15%',
               },
             ].map((item, index) => (

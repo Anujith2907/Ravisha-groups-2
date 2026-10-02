@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <img
               src="/logo-ravisha2.jpg"
-              alt="Ravisha Groups"
+              alt="Ravisha Groups 2"
               className="h-12 w-auto object-contain"
               style={{ mixBlendMode: 'screen', opacity: 0.95 }}
             />
@@ -49,7 +49,7 @@ const Footer = () => {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
         <div className="container-wide py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.7rem', color: 'rgba(255,255,255,0.3)' }}>
-            © {currentYear} Ravisha Groups. All Rights Reserved.
+            © {currentYear} Ravisha Groups 2. All Rights Reserved.
           </p>
           <div className="flex items-center gap-4">
             {['Privacy Policy', 'Terms & Conditions'].map((item) => (

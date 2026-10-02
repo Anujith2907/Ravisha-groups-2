@@ -11,7 +11,7 @@ import InquirySection from '../components/home/InquirySection';
 
 const HomePage = () => {
   useEffect(() => {
-    document.title = 'Ravisha Groups | Construction & Cinema Production';
+    document.title = 'Ravisha Groups 2 | Construction & Cinema Production';
   }, []);
 
   // Handle hash navigation on load

@@ -55,7 +55,7 @@ const InquirySection = () => {
                   color: 'rgba(255,255,255,0.65)',
                 }}
               >
-                Connect with Ravisha Groups for business, construction and cinema opportunities.
+                Connect with Ravisha Groups 2 for business, construction and cinema opportunities.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ const InquirySection = () => {
                 lineHeight: 1.8,
               }}
             >
-              Have a construction requirement, cinema production proposal or business inquiry? Get in touch with Ravisha Groups and we'll get back to you promptly.
+              Have a construction requirement, cinema production proposal or business inquiry? Get in touch with Ravisha Groups 2 and we'll get back to you promptly.
             </p>
           </motion.div>
 
