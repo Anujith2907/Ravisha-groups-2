@@ -378,6 +378,26 @@ const ConstructionPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
               {
+                title: 'Grand Entrance',
+                description: 'A grand entrance crafted with elegance, style, and modern sophistication.',
+                image: '/interior-entrance.jpg',
+              },
+              {
+                title: 'Smart Interior',
+                description: 'Smart interior solutions that blend privacy, beauty, and functionality.',
+                image: '/interior-partition.jpg',
+              },
+              {
+                title: 'Luxury Living',
+                description: 'Luxury living spaces designed for comfort, warmth, and lasting impressions.',
+                image: '/interior-luxury-living.jpg',
+              },
+              {
+                title: 'Living & Dining',
+                description: 'Spacious, contemporary interiors designed for seamless living and memorable moments.',
+                image: '/interior-living-dining.jpg',
+              },
+              {
                 title: 'Living Room',
                 description: 'Elegant interiors crafted for modern and comfortable living.',
                 image: '/interior-living-room.jpg',
@@ -391,11 +411,6 @@ const ConstructionPage = () => {
                 title: 'Bedroom',
                 description: 'A serene and sophisticated bedroom designed for comfort and relaxation.',
                 image: '/interior-bedroom.jpg',
-              },
-              {
-                title: 'Living & Dining',
-                description: 'Spacious, contemporary interiors designed for seamless living and memorable moments.',
-                image: '/interior-living-dining.jpg',
               },
             ].map((item, index) => (
               <motion.div

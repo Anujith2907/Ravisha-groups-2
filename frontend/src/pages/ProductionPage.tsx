@@ -399,6 +399,13 @@ const ProductionPage = () => {
                 objectPosition: 'center 5%',
               },
               {
+                title: 'With Mohanlal',
+                description:
+                  'A distinguished collaboration with Mohanlal, one of Indian cinema’s most celebrated actors.',
+                image: '/cinema-mohanlal.jpg',
+                objectPosition: 'center 65%',
+              },
+              {
                 title: 'With Suresh Chandra Menon',
                 description:
                   'Another memorable interaction with acclaimed filmmaker Suresh Chandra Menon, reflecting a shared passion for cinematic excellence and creative leadership.',

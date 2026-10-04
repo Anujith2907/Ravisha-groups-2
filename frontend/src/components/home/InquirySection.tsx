@@ -198,19 +198,28 @@ const InquirySection = () => {
                 className="text-xs font-bold tracking-[0.15em] uppercase mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#1C1F2E' }}
               >
-                PHONE NUMBER
+                PHONE NUMBERS
               </h3>
-              <a
-                href="tel:+919003144864"
-                className="hover:text-[#B8962E] transition-colors"
-                style={{
-                  fontFamily: 'Plus Jakarta Sans, sans-serif',
-                  fontSize: '0.88rem',
-                  color: '#4A4E5A',
-                }}
-              >
-                +91 90031 44864
-              </a>
+              <div className="flex flex-col gap-1">
+                {[
+                  { display: '+91 98412 75113', tel: '+919841275113' },
+                  { display: '+91 73974 99035', tel: '+917397499035' },
+                  { display: '+91 90031 44864', tel: '+919003144864' },
+                ].map(({ display, tel }) => (
+                  <a
+                    key={tel}
+                    href={`tel:${tel}`}
+                    className="hover:text-[#B8962E] transition-colors"
+                    style={{
+                      fontFamily: 'Plus Jakarta Sans, sans-serif',
+                      fontSize: '0.88rem',
+                      color: '#4A4E5A',
+                    }}
+                  >
+                    {display}
+                  </a>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
