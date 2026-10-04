@@ -408,6 +408,11 @@ const ConstructionPage = () => {
                 image: '/interior-kitchen.jpg',
               },
               {
+                title: 'Intricate Craftsmanship',
+                description: 'Elevating interiors with intricate craftsmanship and contemporary elegance.',
+                image: '/interior-craftsmanship.jpg',
+              },
+              {
                 title: 'Bedroom',
                 description: 'A serene and sophisticated bedroom designed for comfort and relaxation.',
                 image: '/interior-bedroom.jpg',

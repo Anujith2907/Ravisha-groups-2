@@ -378,11 +378,18 @@ const ProductionPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
               {
+                title: 'With Aravind Akash',
+                description:
+                  'Celebrating a memorable association with actor Aravind Akash and the world of Tamil cinema.',
+                image: '/cinema-aravind-akash.jpg',
+                objectPosition: 'center top',
+              },
+              {
                 title: 'With Suresh Chandra Menon',
                 description:
                   'With acclaimed filmmaker Suresh Chandra Menon, celebrating creativity, innovation, and inspiring industry collaborations.',
                 image: '/cinema-suresh-chandra-menon-1.jpg',
-                objectPosition: 'center 8%',
+                objectPosition: 'center top',
               },
               {
                 title: 'With K. Bhagyaraj',
