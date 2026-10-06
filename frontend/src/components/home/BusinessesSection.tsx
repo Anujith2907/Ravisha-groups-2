@@ -14,7 +14,6 @@ const cinemaHighlights = [
   'Feature Film Productions',
   'Collaborations with Top Directors',
   'Tamil Cinema Excellence',
-  'Award-Winning Projects',
 ];
 
 const constructionStats = [

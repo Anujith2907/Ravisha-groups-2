@@ -13,14 +13,7 @@ Official production-ready website and Content Management System for **RAVISHA GR
 | **Admin Dashboard** | [http://localhost:5173/admin/dashboard](http://localhost:5173/admin/dashboard) | CMS & Content Management |
 | **Backend API** | [http://localhost:5000/api](http://localhost:5000/api) | Express REST API server |
 
----
 
-## 🔑 Default Admin Credentials
-
-* **Email:** `admin@ravishagroups2.com`
-* **Password:** `RavishaAdmin@2024!`
-
----
 
 ## 🚀 How to Run locally
 

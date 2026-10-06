@@ -58,14 +58,8 @@ const Navbar = () => {
         style={{ padding: scrolled ? '0.35rem 0' : '0.6rem 0' }}
       >
         <div className="container-wide flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0 group">
-            <img
-              src="/logo.png"
-              alt="Ravisha Groups 2"
-              className="h-10 md:h-12 w-auto object-contain"
-            />
-          </Link>
+          {/* Spacer to keep nav links right-aligned */}
+          <div className="flex-shrink-0 w-4" />
 
 
           {/* Desktop nav */}

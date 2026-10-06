@@ -11,12 +11,6 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <img
-              src="/logo-ravisha2.jpg"
-              alt="Ravisha Groups 2"
-              className="h-12 w-auto object-contain"
-              style={{ mixBlendMode: 'screen', opacity: 0.95 }}
-            />
             <p style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>
               Building Foundations.<br />Creating Stories.
             </p>

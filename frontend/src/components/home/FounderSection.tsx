@@ -151,8 +151,8 @@ const FounderSection = () => {
               
               <ul className="list-disc pl-5 mt-6 space-y-2 text-[#4A4E5A] marker:text-[#B8962E]">
                 <li>Over 30 years of experience in the film industry.</li>
-                <li>Worked as a Co-Producer, Executive Producer, Art Director, and Production Manager across 200+ films.</li>
-                <li>Serving as the Manager for Actor, Director, and Cinematographer Suresh Menon for more than 25 years.</li>
+                <li>Worked as a Co-Producer, Executive Producer, Art Director, and Production Manager across 65 films.</li>
+                <li>Serving as the Manager for Actor, Director, and Cinematographer Suresh Menon for more than 15 years.</li>
                 <li>Has been associated with the production and set work of several notable films, including Enthiran, Vishwaroopam, Kabali, Kaththi, Billa, Valimai, Miruthan, and many others.</li>
                 <li>Brings extensive hands-on experience in film production, set management, art direction, production coordination, and overall film operations.</li>
               </ul>
